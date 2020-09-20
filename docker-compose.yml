@@ -1,0 +1,7 @@
+version: '3'
+services:
+  trailer-bash:
+    image: koolwithk/trailer-bash
+    container_name: trailer-bash
+    volumes:
+      - /opt/input/:/opt/trailer.bash/input/
