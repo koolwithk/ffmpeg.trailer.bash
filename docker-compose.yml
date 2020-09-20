@@ -1,7 +1,7 @@
 version: '3'
 services:
   trailer-bash:
-    image: koolwithk/trailer-bash
+    image: koolwithk/ffmpeg.trailer.bash
     container_name: trailer-bash
     volumes:
-      - /opt/input/:/opt/trailer.bash/input/
+      - /opt/input/:/opt/ffmpeg.trailer.bash/input
