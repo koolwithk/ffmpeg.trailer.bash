@@ -10,4 +10,7 @@ function slowmo() {
   done
 }
 
+if [[ "$slowmo" == "yes" ]]
+then
 slowmo
+fi
