@@ -2,8 +2,8 @@ function movieeffect(){
   cd $input_path
 
   #movie filter1
-  echo "ffmpeg -y -i fade.mp4 -vf eq=brightness=0.01:contrast=0.9:saturation=1.3 filter.mp4"
-  ffmpeg -y -i fade.mp4 -vf eq=brightness=0.01:contrast=0.9:saturation=1.3 filter.mp4
+  echo "ffmpeg -y -i fade.mp4 -vf eq=brightness=0.03:contrast=0.80:saturation=1 filter.mp4"
+  ffmpeg -y -i fade.mp4 -vf eq=brightness=0.03:contrast=0.80:saturation=1 filter.mp4
   rm -rf fade.mp4
 
   #movie filter2 blackbar
