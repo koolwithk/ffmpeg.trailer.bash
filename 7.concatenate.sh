@@ -1,9 +1,9 @@
 function concatenate() {
   cd $input_path
-  list_of_videos=$(ls -l | awk '{print $NF}' | grep 'mp4' | grep subclip)
+  list_of_videos=$(ls -l | awk '{print $NF}' | grep 'mp4' | grep subclip | sort -n) #sort -n to get the subclip in order
   count_vidoes=$(ls -ltr | awk '{print $NF}' | grep 'mp4' | grep subclip | wc -l)
-
-  #input parameter
+  
+  #input parameter for concatenate filter_complex
   input_p1=""
   input_p2=""
   for i in $list_of_videos
