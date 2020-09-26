@@ -7,7 +7,7 @@ function audio() {
   rm -rf concatenate.mp4
 
   #add background song
-  song=$(ls -ltr | awk '{print $NF}' | grep '.mp3' | sed -n 1p)
+  song=$(ls | grep '.mp3' | sed -n 1p)
   if [[ "$song" == "" ]]
   then
     echo "ffmpeg -y -i "../sample/dummysong.mp3" -i audiogain.mp4 -filter_complex '[0:a][1:a]amerge,pan=stereo|c0<c0+c2|c1<c1+c3[out]' -map 1:v -map "[out]" -c:v copy -shortest added_audio.mp4"
