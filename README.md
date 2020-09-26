@@ -2,10 +2,11 @@
 
 ### Motivation : Create simple short movie trailer using ffmpeg with ease.
 
-    1. git clone https://github.com/koolwithk/ffmpeg.trailer.bash.git
-    2. move images and vidoes to `/opt/input`
-    3. bash trailer.sh
-    4. Movietrailer.mp4 will be created inside `ffmpeg.trailer.bash/input/output`
+    1. apt install ffmpeg
+    2. git clone https://github.com/koolwithk/ffmpeg.trailer.bash.git
+    3. move images and vidoes to ffmpeg.trailer.bash/input/
+    4. bash trailer.sh
+    5. Movietrailer.mp4 will be created inside ffmpeg.trailer.bash/input/output
 
 ## Docker:
 
@@ -21,3 +22,12 @@
 #2. remove  ffmpeg.trailer.bash docker container
 
     docker-compose down
+
+## Working:
+
+    1. Convert all images(jpg,jpeg,png) to 1 second MP4 video
+    2. Randomly select 2-3 seconds of clip from all mp4 video
+    3. Add slowmotion to all video
+    4. Add .mp3 as background song if present in "input" directory
+    5. Add some movie effect on video
+    6. Movietrailer.mp4 will be created inside input/output directory
